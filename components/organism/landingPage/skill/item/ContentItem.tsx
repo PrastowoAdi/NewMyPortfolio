@@ -1,5 +1,3 @@
-import React from "react";
-
 interface ContentItemProps {
   href: string;
   img: "nextjs" | "nodejs" | "figma" | "tailwind" | "vscode" | "mongo";

@@ -1,4 +1,3 @@
-import React from "react";
 import TitleCenter from "../../../molecules/landingPage/TitleCenter";
 import Item from "./item";
 

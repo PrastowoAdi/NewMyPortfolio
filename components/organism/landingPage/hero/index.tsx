@@ -7,7 +7,7 @@ import SocialItem from "./SocialItem";
 
 export default function Hero() {
   return (
-    <section id="Hero" className="pt-48 pb-5 bg-neutral-50">
+    <section id="Hero" className="pt-36 pb-5 bg-neutral-50">
       <div className="container">
         <div className="flex flex-wrap">
           <ProfileImg lgHidden />

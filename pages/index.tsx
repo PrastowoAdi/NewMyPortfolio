@@ -1,3 +1,4 @@
+import CourseAcademy from "../components/organism/landingPage/academy";
 import Hero from "../components/organism/landingPage/hero";
 import History from "../components/organism/landingPage/history";
 import NewAchive from "../components/organism/landingPage/newAchive";
@@ -12,6 +13,7 @@ export default function Home() {
       <Skill />
       <History />
       <ProgrammingProject />
+      <CourseAcademy />
     </>
   );
 }

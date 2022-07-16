@@ -1,5 +1,4 @@
 /* eslint-disable react/jsx-one-expression-per-line */
-import React from "react";
 import Button from "../../../molecules/landingPage/Button";
 import DescribeMe from "./DescribeMe";
 import MyProfile from "./MyProfile";

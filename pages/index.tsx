@@ -1,3 +1,4 @@
+import Footer from "../components/molecules/footer";
 import CourseAcademy from "../components/organism/landingPage/academy";
 import NewCertificate from "../components/organism/landingPage/certificate";
 import Hero from "../components/organism/landingPage/hero";
@@ -16,6 +17,7 @@ export default function Home() {
       <ProgrammingProject />
       <CourseAcademy />
       <NewCertificate />
+      <Footer />
     </>
   );
 }

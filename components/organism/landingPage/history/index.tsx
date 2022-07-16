@@ -26,7 +26,7 @@ export default function History() {
   };
 
   return (
-    <section id="myjourney" className="bg-neutral-50">
+    <section id="MyHistory" className="bg-neutral-50">
       <img src="/img/landing-page/history/waves-1.svg" alt="waves" />
       <div className="container">
         <div className="w-full px-4">

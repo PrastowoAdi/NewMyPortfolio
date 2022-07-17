@@ -15,7 +15,7 @@ export default function SkillPage() {
               />
             </div>
           </div>
-          <div className="w-full self-center px-4 pt-7 lg:w-1/2">
+          <div className="w-full px-4 self-center pt-7 lg:w-1/2">
             <TitleLeft
               title="My Skill"
               shortDesc="My Programming Skill"
@@ -27,7 +27,7 @@ export default function SkillPage() {
 
         <div className="flex flex-wrap pt-20 mb-10">
           <ItemSkill
-            href="#"
+            href="/skill/project/"
             img="/img/skill/reactbg.png"
             desc="This is a description of my skills when I use React JS, below
                 you can see my level of experience when I use React JS and

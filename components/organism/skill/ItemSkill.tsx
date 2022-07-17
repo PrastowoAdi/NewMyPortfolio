@@ -29,9 +29,11 @@ export default function ItemSkill(props: ItemSkillProps) {
     setLen(120);
   };
 
-  setTimeout(() => {
-    setMax(150);
-  }, 10000);
+  if (max === 200) {
+    setTimeout(() => {
+      setMax(150);
+    }, 10000);
+  }
 
   return (
     <div className="w-full px-4 lg:w-1/2 xl:w-1/3">

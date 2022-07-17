@@ -1,9 +1,9 @@
 interface TitleLeftProps {
   title: string;
   shortDesc: string;
-  desc: string;
+  desc?: string;
 }
-export default function TitleLeft(props: TitleLeftProps) {
+export default function TitleLeft(props: Partial<TitleLeftProps>) {
   const { title, shortDesc, desc } = props;
   return (
     <>

@@ -42,7 +42,11 @@ export default function Navbar(props: NavbarProps) {
                   title="Skills"
                   active={activeNav === "Skill"}
                 />
-                <NavItem href="/" title="Academy" />
+                <NavItem
+                  href="/academy"
+                  title="Academy"
+                  active={activeNav === "Academy"}
+                />
                 <li className="flex items-center pl-8 mt-3 lg:mt-0">
                   <div className="flex">
                     <span className="mr-2 text-sm text-slate-500">light</span>

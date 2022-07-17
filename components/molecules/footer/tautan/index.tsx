@@ -27,7 +27,7 @@ export default function Tautan() {
                 <ul>
                   <li>
                     <ItemLink
-                      href="#"
+                      href="/skill"
                       img="/img/footer/iconlink.svg"
                       title="Skill"
                     />

@@ -2,11 +2,14 @@
 import Information from "./information";
 import Tautan from "./tautan";
 
-export default function Footer() {
+interface FooterProps {
+  bgColor: string;
+}
+export default function Footer(props: FooterProps) {
+  const { bgColor } = props;
   return (
     <>
-      <img src="/img/footer/waves-1.svg" alt="waves" />
-      <section id="footer-1" className="bg-neutral-50">
+      <section id="footer-1" className={bgColor}>
         <div className="footerContainer">
           <div className="flex flex-wrap">
             <Information />
@@ -14,7 +17,7 @@ export default function Footer() {
           </div>
         </div>
       </section>
-      <footer className="bg-neutral-50 p-5 border-t-2 border-t-neutral-200">
+      <footer className={`p-5 border-t-2 border-t-neutral-200 ${bgColor}`}>
         <div className="container">
           <div className="w-full">
             <p className="font-medium text-sm text-secondary text-center">

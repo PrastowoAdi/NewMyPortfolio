@@ -5,7 +5,7 @@ export default function NewCertificate() {
   return (
     <>
       <img src="/img/landing-page/certificate/waves-1.svg" alt="waves" />
-      <section id="NewCertificate" className="">
+      <section id="NewCertificate" className="pb-20">
         <div className="container">
           <div className="flex flex-wrap">
             <div className="w-full px-4 lg:w-1/2 lg:hidden">

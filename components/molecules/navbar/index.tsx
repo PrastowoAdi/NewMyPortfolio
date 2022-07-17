@@ -12,12 +12,12 @@ export default function Navbar(props: NavbarProps) {
   const { activeNav } = props;
   const [hiddenNav, setHiddenNav] = useState(true);
   const classname = classNames({
-    "bg-white bg-opacity-70 backdrop-blur-sm absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none":
+    "bg-white bg-opacity-70 backdrop-blur-sm absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none lg:backdrop-blur-none":
       true,
     hidden: hiddenNav,
   });
   return (
-    <header className="absolute top-20 left-0 w-full flex items-center z-10 bg-transparent">
+    <header className="absolute left-0 w-full flex items-center z-10 bg-transparent">
       <div className="container">
         <div className="flex items-center justify-between relative">
           <Brand />
@@ -37,7 +37,11 @@ export default function Navbar(props: NavbarProps) {
                   title="Beranda"
                   active={activeNav === "Beranda"}
                 />
-                <NavItem href="/" title="Skills" />
+                <NavItem
+                  href="/skill"
+                  title="Skills"
+                  active={activeNav === "Skill"}
+                />
                 <NavItem href="/" title="Academy" />
                 <li className="flex items-center pl-8 mt-3 lg:mt-0">
                   <div className="flex">

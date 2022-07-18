@@ -9,7 +9,7 @@ interface ItemProps {
 export default function Item(props: ItemProps) {
   const { img, title } = props;
   const classnames = classNames({
-    "shadow-md lg:grayscale lg:opacity-90 lg:transition lg:duration-500 lg:hover:grayscale-0 lg:hover:opacity-100 lg:hover:shadow-lg p-5 rounded-md cursor-pointer border-l-2 border-l-primary":
+    "shadow-md lg:grayscale lg:opacity-90 lg:transition lg:duration-500 lg:hover:grayscale-0 lg:hover:opacity-100 lg:hover:shadow-lg p-5 rounded-md cursor-pointer border-l-2 border-l-primary dark:border-l-customyel dark:bg-neutral-200":
       true,
   });
   return (

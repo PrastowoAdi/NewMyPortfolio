@@ -14,7 +14,7 @@ export default function ItemCourse(props: ItemCourseProps) {
   const { bgImg, logoImg, title, desc, hours, course, href = "/" } = props;
   return (
     <div className="w-full px-4 lg:w-1/2 xl:w-1/3">
-      <div className="rounded-md shadow-lg overflow-hidden mb-10 bg-white">
+      <div className="rounded-md shadow-lg overflow-hidden mb-10 bg-white dark:bg-neutral-50">
         <div
           className="w-full p-5"
           style={{
@@ -33,7 +33,7 @@ export default function ItemCourse(props: ItemCourseProps) {
         </div>
         <div className="p-5">
           <div className="flex flex-wrap items-center justify-center">
-            <div className="w-1/3 border-r-2 border-r-neutral-100">
+            <div className="w-1/3 border-r-2 border-r-neutral-100 dark:border-r-customyel">
               <img
                 src="/img/landing-page/academy/clock.png"
                 alt="clock"
@@ -43,7 +43,7 @@ export default function ItemCourse(props: ItemCourseProps) {
                 {hours} hours
               </h5>
             </div>
-            <div className="w-1/3 border-r-2 border-r-neutral-100">
+            <div className="w-1/3 border-r-2 border-r-neutral-100 dark:border-r-customyel">
               <img
                 src="/img/landing-page/academy/online-learning.png"
                 alt="course"

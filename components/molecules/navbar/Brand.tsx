@@ -4,8 +4,8 @@ export default function Brand() {
   return (
     <div className="px-4">
       <Link href="/">
-        <a className="font-bold text-lg text-primary block py-6">
-          MY PORTFOLIO
+        <a className="font-bold text-2xl text-primary block py-6 dark:text-customyel">
+          MYPORTFOLIO
         </a>
       </Link>
     </div>

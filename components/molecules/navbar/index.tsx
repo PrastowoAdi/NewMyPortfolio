@@ -12,7 +12,7 @@ export default function Navbar(props: NavbarProps) {
   const { activeNav } = props;
   const [hiddenNav, setHiddenNav] = useState(true);
   const classname = classNames({
-    "bg-white bg-opacity-70 backdrop-blur-sm absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none lg:backdrop-blur-none":
+    "bg-white bg-opacity-70 backdrop-blur-sm absolute py-5 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none lg:backdrop-blur-none dark:bg-neutral-900 dark:bg-opacity-70":
       true,
     hidden: hiddenNav,
   });

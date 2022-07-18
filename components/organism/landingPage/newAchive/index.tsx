@@ -3,13 +3,13 @@ import Content from "./Content";
 export default function NewAchive() {
   return (
     <section id="newAchive" className="">
-      <div className="w-full px-4 py-4 bg-neutral-200">
+      <div className="w-full px-4 py-4 bg-neutral-200 dark:bg-neutral-900">
         <div className="flex items-center justify-center mb-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 bg-secondary rounded-full p-1 mr-1"
+            className="h-5 w-5 bg-secondary rounded-full p-1 mr-1 dark:bg-neutral-50"
             viewBox="0 0 20 20"
-            fill="#ffffff"
+            fill="currentColor"
           >
             <path
               fillRule="evenodd"
@@ -17,7 +17,7 @@ export default function NewAchive() {
               clipRule="evenodd"
             />
           </svg>
-          <h3 className="text-sm xs:text-base md:text-lg text-gray-600 font-semibold mr-1">
+          <h3 className="text-sm xs:text-base md:text-lg text-secondary font-semibold mr-1 dark:text-neutral-50">
             New Achievements
           </h3>
         </div>

@@ -7,7 +7,7 @@ interface MediaSocialIconProps {
 export default function MediaSocialIcon(props: MediaSocialIconProps) {
   const { href, img } = props;
   const classname = classNames({
-    "w-10 h-10 shadow-md p-2 hover:shadow-lg rounded-full lg:grayscale lg:transition lg:duration-75 lg:hover:grayscale-0":
+    "w-10 h-10 shadow-md p-2 hover:shadow-lg rounded-full lg:grayscale lg:transition lg:duration-75 lg:hover:grayscale-0 dark:bg-neutral-100":
       true,
   });
   return (

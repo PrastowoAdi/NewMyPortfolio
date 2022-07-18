@@ -26,8 +26,18 @@ export default function History() {
   };
 
   return (
-    <section id="MyHistory" className="bg-neutral-50">
-      <img src="/img/landing-page/history/waves-1.svg" alt="waves" />
+    <section id="MyHistory" className="bg-neutral-50 dark:bg-neutral-800">
+      <svg
+        viewBox="0 0 1440 288"
+        className="dark:text-neutral-700"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 192L48 165.3C96 139 192 85 288 80C384 75 480 117 576 154.7C672 192 768 224 864 208C960 192 1056 128 1152 133.3C1248 139 1344 213 1392 250.7L1440 288V0H1392C1344 0 1248 0 1152 0C1056 0 960 0 864 0C768 0 672 0 576 0C480 0 384 0 288 0C192 0 96 0 48 0H0V192Z"
+          fill="currentColor"
+        />
+      </svg>
+
       <div className="container">
         <div className="w-full px-4">
           <div className="flex flex-wrap">
@@ -45,7 +55,7 @@ export default function History() {
                     className={`cursor-pointer p-2 mr-2 ${activeBtnEdu}`}
                     onClick={btnContentEducation}
                   >
-                    <div className="flex items-center text-gray-700">
+                    <div className="flex items-center text-gray-700 dark:text-neutral-200">
                       <img
                         className="h-5 w-5 mr-1"
                         src="/img/landing-page/history/education/education.svg"
@@ -58,7 +68,7 @@ export default function History() {
                     className={`cursor-pointer p-2 mr-2 ${activeBtnJob}`}
                     onClick={btnContentJob}
                   >
-                    <div className="flex items-center text-gray-700">
+                    <div className="flex items-center text-gray-700 dark:text-neutral-200">
                       <img
                         className="h-5 w-5 mr-1"
                         src="/img/landing-page/history/job/job.svg"

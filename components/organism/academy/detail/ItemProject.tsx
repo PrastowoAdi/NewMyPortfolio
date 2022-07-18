@@ -1,6 +1,9 @@
 /* eslint-disable object-curly-newline */
+
+import Link from "next/link";
+
 /* eslint-disable react/jsx-one-expression-per-line */
-interface ItemCourseProps {
+interface ItemProjectProps {
   bgImg: string;
   logoImg: string;
   title: string;
@@ -10,11 +13,11 @@ interface ItemCourseProps {
   href: string;
 }
 
-export default function ItemCourse(props: ItemCourseProps) {
+export default function ItemProject(props: ItemProjectProps) {
   const { bgImg, logoImg, title, desc, hours, course, href = "/" } = props;
   return (
     <div className="w-full px-4 lg:w-1/2 xl:w-1/3">
-      <div className="rounded-md shadow-lg overflow-hidden mb-10 bg-white dark:bg-neutral-50">
+      <div className="rounded-md shadow-lg overflow-hidden mb-10 bg-white">
         <div
           className="w-full p-5"
           style={{
@@ -27,13 +30,17 @@ export default function ItemCourse(props: ItemCourseProps) {
         </div>
         <div className="px-6 py-4">
           <div className="font-bold text-xl mb-2 text-dark truncate">
-            {title}
+            <Link href="/academy/detail/course/detail">
+              <a className="hover:text-slate-500 hover:transition hover:duration-500">
+                {title}
+              </a>
+            </Link>
           </div>
           <p className="text-sm text-secondary">{desc}</p>
         </div>
         <div className="p-5">
           <div className="flex flex-wrap items-center justify-center">
-            <div className="w-1/3 border-r-2 border-r-neutral-100 dark:border-r-customyel">
+            <div className="w-1/3 border-r-2 border-r-neutral-100">
               <img
                 src="/img/landing-page/academy/clock.png"
                 alt="clock"
@@ -43,7 +50,7 @@ export default function ItemCourse(props: ItemCourseProps) {
                 {hours} hours
               </h5>
             </div>
-            <div className="w-1/3 border-r-2 border-r-neutral-100 dark:border-r-customyel">
+            <div className="w-1/3 border-r-2 border-r-neutral-100">
               <img
                 src="/img/landing-page/academy/online-learning.png"
                 alt="course"

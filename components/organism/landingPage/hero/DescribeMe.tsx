@@ -2,7 +2,7 @@
 
 export default function DescribeMe() {
   return (
-    <p className="font-medium text-secondary mb-5 leading-relaxed">
+    <p className="font-medium text-secondary mb-5 leading-relaxed dark:text-neutral-100">
       Hey my fullname is Prastowo Adi Nugroho now I work in{" "}
       <span className="font-semibold">PT. Mitra Integrasi Informatika </span>
       as a Junior Application Developer. The first three months of my work, I

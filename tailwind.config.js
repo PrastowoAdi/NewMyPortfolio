@@ -15,6 +15,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        customyel: "#F0EC8B",
         primary: "#FFD803",
         secondary: "#64748b",
         dark: "#0f172a",

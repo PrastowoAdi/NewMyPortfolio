@@ -9,7 +9,7 @@ interface ButtonProps {
 export default function Button(props: Partial<ButtonProps>) {
   const { href = "/", target, title } = props;
   const classname = cx({
-    "text-base font-semibold text-white bg-primary py-3 px-8 rounded-md hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out":
+    "text-base font-semibold text-white bg-primary py-3 px-8 rounded-md hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out dark:bg-customyel dark:text-neutral-800":
       true,
   });
   return (

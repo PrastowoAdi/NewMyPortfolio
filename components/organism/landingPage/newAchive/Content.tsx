@@ -2,12 +2,12 @@
 
 export default function Content() {
   return (
-    <h3 className="text-sm xs:text-base md:text-lg text-gray-600 font-semibold text-center">
+    <h3 className="text-sm xs:text-base md:text-lg text-secondary font-semibold text-center dark:text-neutral-50">
       Finish NextJS course in UDEMY,{" "}
       <span>
         <a
           href="#"
-          className="text-gray-600 font-semibold hover:text-slate-400 transition duration-200 ease-out"
+          className="text-secondary font-semibold hover:text-slate-400 transition duration-200 ease-out dark:text-neutral-50 dark:hover:text-darkPrimary"
         >
           See here!
         </a>

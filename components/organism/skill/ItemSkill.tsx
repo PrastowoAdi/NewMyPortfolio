@@ -37,14 +37,14 @@ export default function ItemSkill(props: ItemSkillProps) {
 
   return (
     <div className="w-full px-4 lg:w-1/2 xl:w-1/3">
-      <div className="rounded-md shadow-lg overflow-hidden mb-10 bg-white">
+      <div className="rounded-md shadow-lg overflow-hidden mb-10 bg-white dark:bg-neutral-600">
         <div className="w-full p-2">
-          <div className="w-full">
+          <div className="w-full rounded-md">
             <img src={img} alt="item-img" />
           </div>
         </div>
         <div className="px-6">
-          <p className="text-base text-secondary mb-5">
+          <p className="text-base text-secondary mb-5 dark:text-neutral-100">
             {truncate(desc, max, len)}
           </p>
           {max === 200 ? (
@@ -61,13 +61,13 @@ export default function ItemSkill(props: ItemSkillProps) {
                 alt="clock"
                 className="w-5 h-5 mx-auto"
               />
-              <h5 className="text-xs font-semibold text-center mt-1">
+              <h5 className="text-xs font-semibold text-center mt-1 dark:text-neutral-100">
                 {level}
               </h5>
             </div>
             <div className="w-1/2">
               <Link href={href}>
-                <a className="hover:text-slate-500 hover:transition hover:duration-500">
+                <a className="hover:text-slate-500 hover:transition hover:duration-500 dark:text-neutral-100 dark:hover:text-customyel">
                   <img
                     src="/img/skill/task.png"
                     alt="course"

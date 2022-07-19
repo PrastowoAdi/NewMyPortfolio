@@ -7,21 +7,21 @@ import LogoItem from "./LogoItem";
 
 export default function Detail() {
   return (
-    <section id="mylastproject" className="pt-36 pb-36">
+    <section id="mylastproject" className="pt-36 pb-36 dark:bg-neutral-800">
       <div className="container">
+        <div className="text-secondary px-6 w-full gap-2 flex pb-16 justify-end lg:pb-15 dark:text-neutral-100">
+          <ItemNav href="/skill" title="Skill" />
+          {" / "}
+          <ItemNav href="/skill/project" title="Project" />
+          {" / "}
+          <ItemNav href="/skill/project/detail" title="Detail" active />
+        </div>
         <div className="flex flex-wrap">
           <ImgBg />
-          <div className="w-full px-4 lg:w-1/2 py-4">
+          <div className="w-full px-4 lg:w-1/2 self-center py-4">
             <div className="max-w-xl mx-auto">
-              <div className="text-secondary pb-16 w-full gap-2 flex justify-end lg:pb-20">
-                <ItemNav href="/skill" title="Skill" />
-                {" / "}
-                <ItemNav href="/skill/project" title="Project" />
-                {" / "}
-                <ItemNav href="/skill/project/detail" title="Detail" active />
-              </div>
               <TitleLeft title="Detail Project" shortDesc="Twitter Clone" />
-              <p className="font-medium text-md text-secondary mt-1">
+              <p className="font-medium text-md text-secondary mt-1 dark:text-neutral-100">
                 This my programming project was i learned and build recently.
                 <span>
                   This project I studied at UDEMY and developed using
@@ -44,7 +44,7 @@ export default function Detail() {
           </div>
         </div>
         <div className="w-full lg:w-3/4 mx-auto p-2 mt-5">
-          <div className="flex overflow-x-auto items-center scrollbar-none">
+          <div className="flex overflow-x-auto items-center scrollbar-none dark:bg-neutral-50">
             <LogoItem href="#" img="/img/skill/project/detail/nextjs.png" />
             <LogoItem href="#" img="/img/skill/project/detail/mongo.png" />
             <LogoItem href="#" img="/img/skill/project/detail/nodejs.png" />

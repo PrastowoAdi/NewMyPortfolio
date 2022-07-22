@@ -4,6 +4,7 @@
 import classNames from "classnames";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
+import { motion } from "framer-motion";
 import Brand from "./Brand";
 import HamburgerButton from "./HamburgerButton";
 import NavItem from "./NavItem";
@@ -78,7 +79,12 @@ export default function Navbar(props: NavbarProps) {
     hidden: hiddenNav,
   });
   return (
-    <header className="absolute left-0 w-full flex items-center z-10 bg-transparent">
+    <motion.header
+      className="absolute left-0 w-full flex items-center z-10 bg-transparent"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.4, duration: 1 }}
+    >
       <div className="container">
         <div className="flex items-center justify-between relative">
           <Brand />
@@ -116,6 +122,6 @@ export default function Navbar(props: NavbarProps) {
           </div>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }

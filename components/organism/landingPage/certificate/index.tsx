@@ -1,7 +1,14 @@
+import { useState } from "react";
 import Button from "../../../molecules/landingPage/Button";
 import TitleLeft from "../../../molecules/landingPage/TitleLeft";
+import TitleLeftSkeleton from "./skeleton/TitleLeftSkeleton";
 
 export default function NewCertificate() {
+  const [loading, setLoading] = useState(false);
+
+  setTimeout(() => {
+    setLoading(true);
+  }, 5000);
   return (
     <section id="NewCertificate" className="pb-20 dark:bg-neutral-700">
       <svg
@@ -25,17 +32,21 @@ export default function NewCertificate() {
               className="w-[80%] mx-auto"
             />
           </div>
-          <div className="w-full px-4 lg:w-1/2 py-4">
-            <div className="max-w-xl mx-auto mb-16 lg:mt-16">
-              <TitleLeft
-                title="My New Certificate"
-                shortDesc="What is Docker"
-                desc=" I got this certificate by taking an online webinar at PT Mitra
-                Integrasi Informatika on 19 May 2022. My goal in joining this
-                is to find out what Docker is and how it works."
-              />
+          <div className="w-full px-4 lg:w-1/2 py-4 self-center">
+            <div className="max-w-xl mx-auto mb-16">
+              {loading ? (
+                <TitleLeft
+                  title="My New Certificate"
+                  shortDesc="What is Docker"
+                  desc=" I got this certificate by taking an online webinar at PT Mitra
+                  Integrasi Informatika on 19 May 2022. My goal in joining this
+                  is to find out what Docker is and how it works."
+                />
+              ) : (
+                <TitleLeftSkeleton />
+              )}
             </div>
-            <Button href="#" title="Certificate" />
+            {loading ? <Button href="#" title="Certificate" /> : ""}
           </div>
           <div className="w-full px-4 lg:w-1/2 py-4 hidden lg:block">
             <img

@@ -1,8 +1,15 @@
+import { useState } from "react";
 import TitleLeft from "../../molecules/landingPage/TitleLeft";
 import BgImg from "./BgImg";
 import ItemAcademy from "./ItemAcademy";
+import ItemAcademySkeleton from "./skeleton/ItemAcademySkeleton";
 
 export default function AcademyPage() {
+  const [loading, setLoading] = useState(false);
+
+  setTimeout(() => {
+    setLoading(true);
+  }, 5000);
   return (
     <section id="Academy" className="pt-28 pb-28 dark:bg-neutral-800">
       <div className="container">
@@ -16,12 +23,22 @@ export default function AcademyPage() {
             />
             <div className="w-4/5 mt-10 lg:mt-2">
               <div className="flex gap-6 overflow-x-auto items-center scrollbar-none ">
-                <ItemAcademy
-                  href="/academy/detail"
-                  img="/img/academy/udemy.png"
-                />
-                <ItemAcademy href="#" img="/img/academy/bwa.png" />
-                <ItemAcademy href="#" img="/img/academy/sanber.png" />
+                {loading ? (
+                  <>
+                    <ItemAcademy
+                      href="/academy/detail"
+                      img="/img/academy/udemy.png"
+                    />
+                    <ItemAcademy href="#" img="/img/academy/bwa.png" />
+                    <ItemAcademy href="#" img="/img/academy/sanber.png" />
+                  </>
+                ) : (
+                  <>
+                    <ItemAcademySkeleton />
+                    <ItemAcademySkeleton />
+                    <ItemAcademySkeleton />
+                  </>
+                )}
               </div>
             </div>
           </div>

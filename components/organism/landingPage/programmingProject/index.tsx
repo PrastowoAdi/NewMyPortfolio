@@ -1,8 +1,16 @@
+import { useState } from "react";
 import Button from "../../../molecules/landingPage/Button";
 import TitleLeft from "../../../molecules/landingPage/TitleLeft";
 import ProgrammingItem from "./ProgrammingItem";
+import ProgramItemSkeleton from "./skeleton/ProgramItemSkeleton";
+import TitleLeftSkeleton from "./skeleton/TitleLeftSkeleton";
 
 export default function ProgrammingProject() {
+  const [loading, setLoading] = useState(false);
+
+  setTimeout(() => {
+    setLoading(true);
+  }, 5000);
   return (
     <section id="LastProject" className="dark:bg-neutral-700">
       <svg
@@ -27,39 +35,54 @@ export default function ProgrammingProject() {
           </div>
           <div className="w-full px-4 lg:w-1/2 py-4">
             <div className="max-w-xl mx-auto mb-16 lg:mt-16">
-              <TitleLeft
-                title="My Programming Project"
-                shortDesc="Twitter Clone"
-                desc="This my programming project was i learned and build recently. This project I studied at UDEMY and developed using Javascript."
-              />
+              {loading ? (
+                <TitleLeft
+                  title="My Programming Project"
+                  shortDesc="Twitter Clone"
+                  desc="This my programming project was i learned and build recently. This project I studied at UDEMY and developed using Javascript."
+                />
+              ) : (
+                <TitleLeftSkeleton />
+              )}
+
               <div className="flex flex-wrap items-center gap-5 mt-5 mb-10">
-                <ProgrammingItem
-                  href="#"
-                  img="/img/landing-page/programming-project/website.png"
-                  title="Website"
-                />
-                <ProgrammingItem
-                  href="#"
-                  img="/img/landing-page/programming-project/github.svg"
-                  title="Github"
-                />
-                <ProgrammingItem
-                  href="#"
-                  img="/img/landing-page/programming-project/nextjs.svg"
-                  title="NextJS"
-                />
-                <ProgrammingItem
-                  href="#"
-                  img="/img/landing-page/programming-project/nodejs.svg"
-                  title="Nodejs"
-                />
-                <ProgrammingItem
-                  href="#"
-                  img="/img/landing-page/programming-project/firebase.svg"
-                  title="Firebase"
-                />
+                {loading ? (
+                  <>
+                    <ProgrammingItem
+                      href="#"
+                      img="/img/landing-page/programming-project/website.png"
+                      title="Website"
+                    />
+                    <ProgrammingItem
+                      href="#"
+                      img="/img/landing-page/programming-project/github.svg"
+                      title="Github"
+                    />
+                    <ProgrammingItem
+                      href="#"
+                      img="/img/landing-page/programming-project/nextjs.svg"
+                      title="NextJS"
+                    />
+                    <ProgrammingItem
+                      href="#"
+                      img="/img/landing-page/programming-project/nodejs.svg"
+                      title="Nodejs"
+                    />
+                    <ProgrammingItem
+                      href="#"
+                      img="/img/landing-page/programming-project/firebase.svg"
+                      title="Firebase"
+                    />
+                  </>
+                ) : (
+                  <>
+                    <ProgramItemSkeleton />
+                    <ProgramItemSkeleton />
+                    <ProgramItemSkeleton />
+                  </>
+                )}
               </div>
-              <Button href="#" title="See More" />
+              {loading ? <Button href="#" title="See More" /> : ""}
             </div>
           </div>
           <div className="w-full px-4 lg:w-1/2 lg:hidden">

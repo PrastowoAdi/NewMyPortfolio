@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import ItemNav from "../../../molecules/ItemNav";
 import TitleLeft from "../../../molecules/landingPage/TitleLeft";
 import ImgBg from "./ImgBg";
 import ItemProject from "./ItemProject";
+import ContentDetailSkeleton from "./skeleton/ContentDetailSkeleton";
 
 export default function ProjectPage() {
+  const [loading, setLoading] = useState(false);
+
+  setTimeout(() => {
+    setLoading(true);
+  }, 5000);
   return (
     <section id="MyProject" className="pt-36 pb-20 dark:bg-neutral-800">
       <div className="container">
@@ -16,31 +22,35 @@ export default function ProjectPage() {
         <div className="flex flex-wrap">
           <ImgBg />
           <div className="w-full px-4 lg:w-1/2 py-4 self-center">
-            <div className="max-w-xl mx-auto mb-16">
-              <TitleLeft title="Project Complated" shortDesc="ReactJS" />
-              <div className="w-full lg:w-4/5">
-                <p className="font-medium text-md text-secondary dark:text-neutral-100">
-                  Below is some my programming project was i learned and build
-                  using ReactJS :
-                </p>
+            {loading ? (
+              <div className="max-w-xl mx-auto mb-16">
+                <TitleLeft title="Project Complated" shortDesc="ReactJS" />
+                <div className="w-full lg:w-4/5">
+                  <p className="font-medium text-md text-secondary dark:text-neutral-100">
+                    Below is some my programming project was i learned and build
+                    using ReactJS :
+                  </p>
+                </div>
+                <ul className="mt-1">
+                  <li>
+                    <ItemProject
+                      href="/skill/project/detail"
+                      title="Twitter Clone"
+                    />
+                    <ItemProject
+                      href="/skill/project/detail"
+                      title="Instagram Clone"
+                    />
+                    <ItemProject
+                      href="/skill/project/detail"
+                      title="Google Search Clone"
+                    />
+                  </li>
+                </ul>
               </div>
-              <ul className="mt-1">
-                <li>
-                  <ItemProject
-                    href="/skill/project/detail"
-                    title="Twitter Clone"
-                  />
-                  <ItemProject
-                    href="/skill/project/detail"
-                    title="Instagram Clone"
-                  />
-                  <ItemProject
-                    href="/skill/project/detail"
-                    title="Google Search Clone"
-                  />
-                </li>
-              </ul>
-            </div>
+            ) : (
+              <ContentDetailSkeleton />
+            )}
           </div>
         </div>
       </div>

@@ -1,7 +1,14 @@
+import { useState } from "react";
 import TitleLeft from "../../molecules/landingPage/TitleLeft";
 import ItemSkill from "./ItemSkill";
+import ItemSkillSkeleton from "./skeleton/ItemSkillSkeleton";
 
 export default function SkillPage() {
+  const [loading, setLoading] = useState(false);
+
+  setTimeout(() => {
+    setLoading(true);
+  }, 5000);
   return (
     <section
       id="SkillPage"
@@ -29,33 +36,43 @@ export default function SkillPage() {
         </div>
 
         <div className="flex flex-wrap pt-20 mb-10">
-          <ItemSkill
-            href="/skill/project/"
-            img="/img/skill/reactbg.png"
-            desc="This is a description of my skills when I use React JS, below
+          {loading ? (
+            <>
+              <ItemSkill
+                href="/skill/project/"
+                img="/img/skill/reactbg.png"
+                desc="This is a description of my skills when I use React JS, below
                 you can see my level of experience when I use React JS and
                 some projects I have successfully completed using React JS."
-            level="Intermediate"
-            project="2"
-          />
-          <ItemSkill
-            href="/skill/project/"
-            img="/img/skill/reactbg.png"
-            desc="This is a description of my skills when I use React JS, below
+                level="Intermediate"
+                project="2"
+              />
+              <ItemSkill
+                href="/skill/project/"
+                img="/img/skill/reactbg.png"
+                desc="This is a description of my skills when I use React JS, below
                 you can see my level of experience when I use React JS and
                 some projects I have successfully completed using React JS."
-            level="Intermediate"
-            project="2"
-          />
-          <ItemSkill
-            href="/skill/project/"
-            img="/img/skill/reactbg.png"
-            desc="This is a description of my skills when I use React JS, below
+                level="Intermediate"
+                project="2"
+              />
+              <ItemSkill
+                href="/skill/project/"
+                img="/img/skill/reactbg.png"
+                desc="This is a description of my skills when I use React JS, below
                 you can see my level of experience when I use React JS and
                 some projects I have successfully completed using React JS."
-            level="Intermediate"
-            project="2"
-          />
+                level="Intermediate"
+                project="2"
+              />
+            </>
+          ) : (
+            <>
+              <ItemSkillSkeleton />
+              <ItemSkillSkeleton />
+              <ItemSkillSkeleton />
+            </>
+          )}
         </div>
       </div>
       <div className="w-10 mx-auto">

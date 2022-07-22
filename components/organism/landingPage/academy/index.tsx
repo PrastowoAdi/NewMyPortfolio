@@ -1,7 +1,14 @@
+import { useState } from "react";
 import TitleCenter from "../../../molecules/landingPage/TitleCenter";
 import ItemCourse from "./ItemCourse";
+import ItemCourseSkeleton from "./skeleton/ItemCourseSkeleton";
 
 export default function CourseAcademy() {
+  const [loading, setLoading] = useState(false);
+
+  setTimeout(() => {
+    setLoading(true);
+  }, 5000);
   return (
     <section id="academy" className="pb-32 bg-neutral-100 dark:bg-neutral-800">
       <svg
@@ -25,36 +32,46 @@ export default function CourseAcademy() {
           />
         </div>
         <div className="flex flex-wrap">
-          <ItemCourse
-            bgImg="/img/landing-page/academy/academyudemy1.png"
-            logoImg="/img/landing-page/academy/udemylogo.png"
-            title="Next.js Projects - 3 NextJS projects"
-            desc="LNext.js (react js framework) Projects. Build 3 NextJS hands
-            on projects. IMDB, Instagram and Google clones using Next js."
-            course="128"
-            hours="50"
-            href="#"
-          />
-          <ItemCourse
-            bgImg="/img/landing-page/academy/academyudemy1.png"
-            logoImg="/img/landing-page/academy/udemylogo.png"
-            title="Next.js Projects - 3 NextJS projects"
-            desc="LNext.js (react js framework) Projects. Build 3 NextJS hands
-            on projects. IMDB, Instagram and Google clones using Next js."
-            course="128"
-            hours="50"
-            href="#"
-          />
-          <ItemCourse
-            bgImg="/img/landing-page/academy/academyudemy1.png"
-            logoImg="/img/landing-page/academy/udemylogo.png"
-            title="Next.js Projects - 3 NextJS projects"
-            desc="LNext.js (react js framework) Projects. Build 3 NextJS hands
-            on projects. IMDB, Instagram and Google clones using Next js."
-            course="128"
-            hours="50"
-            href="#"
-          />
+          {loading ? (
+            <>
+              <ItemCourse
+                bgImg="/img/landing-page/academy/academyudemy1.png"
+                logoImg="/img/landing-page/academy/udemylogo.png"
+                title="Next.js Projects - 3 NextJS projects"
+                desc="LNext.js (react js framework) Projects. Build 3 NextJS hands
+              on projects. IMDB, Instagram and Google clones using Next js."
+                course="128"
+                hours="50"
+                href="#"
+              />
+              <ItemCourse
+                bgImg="/img/landing-page/academy/academyudemy1.png"
+                logoImg="/img/landing-page/academy/udemylogo.png"
+                title="Next.js Projects - 3 NextJS projects"
+                desc="LNext.js (react js framework) Projects. Build 3 NextJS hands
+              on projects. IMDB, Instagram and Google clones using Next js."
+                course="128"
+                hours="50"
+                href="#"
+              />
+              <ItemCourse
+                bgImg="/img/landing-page/academy/academyudemy1.png"
+                logoImg="/img/landing-page/academy/udemylogo.png"
+                title="Next.js Projects - 3 NextJS projects"
+                desc="LNext.js (react js framework) Projects. Build 3 NextJS hands
+              on projects. IMDB, Instagram and Google clones using Next js."
+                course="128"
+                hours="50"
+                href="#"
+              />
+            </>
+          ) : (
+            <>
+              <ItemCourseSkeleton />
+              <ItemCourseSkeleton />
+              <ItemCourseSkeleton />
+            </>
+          )}
         </div>
       </div>
     </section>

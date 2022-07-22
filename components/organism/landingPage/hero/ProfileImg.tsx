@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import { motion } from "framer-motion";
 
 interface ProfileImgProps {
   hidden?: boolean;
@@ -14,7 +15,12 @@ export default function ProfileImg(props: Partial<ProfileImgProps>) {
     "lg:hidden": lgHidden,
   });
   return (
-    <div className={classname}>
+    <motion.div
+      className={classname}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 1.4, duration: 1 }}
+    >
       <div className="relative mt-10">
         <img
           src="/img/landing-page/hero/hero.png"
@@ -22,6 +28,6 @@ export default function ProfileImg(props: Partial<ProfileImgProps>) {
           className="max-w-full mx-auto"
         />
       </div>
-    </div>
+    </motion.div>
   );
 }

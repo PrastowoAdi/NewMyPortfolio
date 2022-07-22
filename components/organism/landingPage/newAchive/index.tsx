@@ -7,7 +7,7 @@ export default function NewAchive() {
         <div className="flex items-center justify-center mb-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 bg-secondary rounded-full p-1 mr-1 dark:bg-neutral-50"
+            className="h-5 w-5 bg-white rounded-full p-1 mr-1 text-secondary dark:bg-neutral-50 dark:text-neutral-900"
             viewBox="0 0 20 20"
             fill="currentColor"
           >

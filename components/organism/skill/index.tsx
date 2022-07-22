@@ -3,7 +3,10 @@ import ItemSkill from "./ItemSkill";
 
 export default function SkillPage() {
   return (
-    <section id="home" className="pt-28 pb-28 bg-neutral-50">
+    <section
+      id="SkillPage"
+      className="pt-28 pb-28 bg-neutral-50 dark:bg-neutral-800"
+    >
       <div className="container">
         <div className="flex flex-wrap">
           <div className="hidden w-full self-center px-4 lg:w-1/2 lg:block">
@@ -36,7 +39,7 @@ export default function SkillPage() {
             project="2"
           />
           <ItemSkill
-            href="#"
+            href="/skill/project/"
             img="/img/skill/reactbg.png"
             desc="This is a description of my skills when I use React JS, below
                 you can see my level of experience when I use React JS and
@@ -45,7 +48,7 @@ export default function SkillPage() {
             project="2"
           />
           <ItemSkill
-            href="#"
+            href="/skill/project/"
             img="/img/skill/reactbg.png"
             desc="This is a description of my skills when I use React JS, below
                 you can see my level of experience when I use React JS and
@@ -58,7 +61,7 @@ export default function SkillPage() {
       <div className="w-10 mx-auto">
         <a
           href="#"
-          className=" text-secondary hover:text-primary transition duration-500"
+          className=" text-secondary hover:text-primary transition duration-500 dark:text-neutral-200 dark:hover:text-customyel"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

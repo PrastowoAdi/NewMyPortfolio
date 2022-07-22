@@ -9,7 +9,7 @@ export default function Footer(props: FooterProps) {
   const { bgColor } = props;
   return (
     <>
-      <section id="footer-1" className={`${bgColor} dark:bg-neutral-900`}>
+      <section id="footer-1" className={`${bgColor} dark:bg-neutral-900 pt-20`}>
         <div className="footerContainer">
           <div className="flex flex-wrap">
             <Information />

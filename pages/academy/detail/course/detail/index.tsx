@@ -8,7 +8,7 @@ export default function DetailCourse() {
     <>
       <Navbar activeNav="Academy" />
       <CourseDetail />
-      <Footer bgColor="bg-neutral-50" />
+      <Footer bgColor="bg-neutral-100" />
       <ToTopBtn />
     </>
   );

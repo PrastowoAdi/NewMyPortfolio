@@ -8,7 +8,7 @@ export default function Academy() {
     <>
       <Navbar activeNav="Academy" />
       <AcademyPage />
-      <Footer bgColor="bg-neutral-50" />
+      <Footer bgColor="bg-neutral-100" />
       <ToTopBtn />
     </>
   );

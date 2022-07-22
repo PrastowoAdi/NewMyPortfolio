@@ -9,7 +9,7 @@ export default function ItemProject(props: ItemProjectProps) {
   const { href = "/", title } = props;
   return (
     <Link href={href}>
-      <a className="text-secondary hover:text-primary transition duration-200">
+      <a className="text-secondary hover:text-primary transition duration-200 dark:text-neutral-100 dark:hover:text-customyel">
         <div className="flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"

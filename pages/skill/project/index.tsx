@@ -8,7 +8,7 @@ export default function Project() {
     <>
       <Navbar activeNav="Skill" />
       <ProjectPage />
-      <Footer bgColor="bg-neutral-50" />
+      <Footer bgColor="bg-neutral-100" />
       <ToTopBtn />
     </>
   );

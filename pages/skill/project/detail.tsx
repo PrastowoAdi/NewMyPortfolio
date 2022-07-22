@@ -8,7 +8,7 @@ export default function ProjectDetail() {
     <>
       <Navbar activeNav="Skill" />
       <Detail />
-      <Footer bgColor="bg-neutral-50" />
+      <Footer bgColor="bg-neutral-100" />
       <ToTopBtn />
     </>
   );

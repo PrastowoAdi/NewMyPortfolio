@@ -5,9 +5,9 @@ import ItemProject from "./ItemProject";
 
 export default function DetailPage() {
   return (
-    <section id="DetailAcademy" className="pt-36 pb-20">
+    <section id="DetailAcademy" className="pt-36 pb-20 dark:bg-neutral-800">
       <div className="container">
-        <div className="text-secondary px-6 w-full gap-2 flex pb-12 justify-end lg:justify-start lg:pb-0">
+        <div className="text-secondary px-6 w-full gap-2 flex pb-12 justify-end lg:justify-start lg:pb-0 dark:text-neutral-100">
           <ItemNav href="/academy" title="Academy" />
           {" / "}
           <ItemNav href="/academy/detail" title="Detail" active />
@@ -35,6 +35,7 @@ export default function DetailPage() {
             course="128"
             hours="50"
             href="#"
+            hrefDetail="/academy/detail/course/detail"
           />
           <ItemProject
             bgImg="/img/landing-page/academy/academyudemy1.png"
@@ -45,6 +46,7 @@ export default function DetailPage() {
             course="128"
             hours="50"
             href="#"
+            hrefDetail="/academy/detail/course/detail"
           />
           <ItemProject
             bgImg="/img/landing-page/academy/academyudemy1.png"
@@ -55,6 +57,7 @@ export default function DetailPage() {
             course="128"
             hours="50"
             href="#"
+            hrefDetail="/academy/detail/course/detail"
           />
         </div>
       </div>

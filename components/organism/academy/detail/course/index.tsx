@@ -5,9 +5,9 @@ import ItemCourse from "./ItemCourse";
 
 export default function CourseDetail() {
   return (
-    <section id="CourseDetail" className="pt-36 pb-20">
+    <section id="CourseDetail" className="pt-36 pb-20 dark:bg-neutral-800">
       <div className="container">
-        <div className="text-secondary px-6 w-full gap-2 flex pb-12 justify-end lg:justify-start lg:pb-15">
+        <div className="text-secondary px-6 w-full gap-2 flex pb-12 justify-end lg:justify-start lg:pb-15 dark:text-neutral-100">
           <ItemNav href="/academy" title="Academy" />
           {" / "}
           <ItemNav href="/academy/detail" title="Detail" />
@@ -27,7 +27,7 @@ export default function CourseDetail() {
                 shortDesc="Next.js Projects - 3 NextJS projects"
                 desc="We are going to use the best practices of Nextjs to design and build fully functional websites. So far, three projects have been created for this course, including IMDB, Instagram, Twitter Clones, and Google clones, and finally, you are going to learn how to deploy your apps using vercel."
               />
-              <ul className="mt-2 text-secondary px-5">
+              <ul className="mt-2 text-secondary px-5 dark:text-neutral-100">
                 <ol className="list-decimal">
                   <ItemCourse
                     title="IMDB Clone"

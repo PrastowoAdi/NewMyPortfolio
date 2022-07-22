@@ -8,8 +8,7 @@ interface ItemAcademyProps {
 export default function ItemAcademy(props: ItemAcademyProps) {
   const { href = "/", img } = props;
   const classnames = cx({
-    "flex-shrink-0 w-[100px] py-4 lg:grayscale lg:opacity-80 lg:hover:grayscale-0 lg:hover:transition lg:hover:duration-300":
-      true,
+    "flex-shrink-0 w-[100px] py-4 hover:brightness-125": true,
   });
   return (
     <Link href={href}>

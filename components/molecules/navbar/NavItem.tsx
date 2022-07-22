@@ -11,7 +11,7 @@ export default function NavItem(props: Partial<NavItemProps>) {
   const classname = cx({
     "text-base text-slate-700 py-2 mx-6 group-hover:text-primary flex dark:group-hover:text-customyel dark:text-neutral-100":
       true,
-    "text-yellow-400 dark:text-yellow-200": active,
+    "text-yellow-500 dark:text-yellow-300": active,
   });
   return (
     <li className="group">

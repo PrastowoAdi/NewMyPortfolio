@@ -11,7 +11,7 @@ export default function ItemNav(props: Partial<ItemNavProps>) {
   const classname = classNames({
     "hover:text-primary transition duration-200 dark:hover:text-customyel":
       true,
-    "dark:text-yellow-200": active,
+    "text-yellow-400 dark:text-yellow-200": active,
   });
   return (
     <Link href={href}>

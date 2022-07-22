@@ -1,5 +1,5 @@
+import ItemNav from "../../../molecules/ItemNav";
 import TitleLeft from "../../../molecules/landingPage/TitleLeft";
-import ItemNav from "../../../molecules/skill/ItemNav";
 import BgImg from "./BgImg";
 import ItemProject from "./ItemProject";
 

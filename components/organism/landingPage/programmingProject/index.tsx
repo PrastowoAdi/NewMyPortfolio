@@ -7,7 +7,7 @@ export default function ProgrammingProject() {
     <section id="LastProject" className="dark:bg-neutral-700">
       <svg
         viewBox="0 0 1440 193"
-        className="dark:text-neutral-800 pb-10"
+        className="text-neutral-100 dark:text-neutral-800 pb-10"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path

@@ -1,7 +1,7 @@
 import React from "react";
+import ItemNav from "../../../molecules/ItemNav";
 import TitleLeft from "../../../molecules/landingPage/TitleLeft";
 import ImgBg from "./ImgBg";
-import ItemNav from "./ItemNav";
 import ItemProject from "./ItemProject";
 
 export default function ProjectPage() {

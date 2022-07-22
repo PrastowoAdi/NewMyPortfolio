@@ -5,7 +5,7 @@ export default function NewCertificate() {
   return (
     <section id="NewCertificate" className="pb-20 dark:bg-neutral-700">
       <svg
-        className="dark:text-neutral-800"
+        className="text-neutral-100 dark:text-neutral-800"
         viewBox="0 0 1440 256"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

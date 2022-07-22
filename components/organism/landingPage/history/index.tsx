@@ -26,10 +26,10 @@ export default function History() {
   };
 
   return (
-    <section id="MyHistory" className="bg-neutral-50 dark:bg-neutral-800">
+    <section id="MyHistory" className="bg-neutral-100 dark:bg-neutral-800">
       <svg
         viewBox="0 0 1440 288"
-        className="dark:text-neutral-700"
+        className="text-white dark:text-neutral-700"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path

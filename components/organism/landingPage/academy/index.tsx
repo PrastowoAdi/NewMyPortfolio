@@ -3,9 +3,9 @@ import ItemCourse from "./ItemCourse";
 
 export default function CourseAcademy() {
   return (
-    <section id="academy" className="pb-32 bg-neutral-50 dark:bg-neutral-800">
+    <section id="academy" className="pb-32 bg-neutral-100 dark:bg-neutral-800">
       <svg
-        className="dark:text-neutral-700"
+        className="text-white dark:text-neutral-700"
         viewBox="0 0 1440 224"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

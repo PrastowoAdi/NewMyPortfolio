@@ -1,6 +1,6 @@
 import React from "react";
+import ItemNav from "../../../../molecules/ItemNav";
 import TitleLeft from "../../../../molecules/landingPage/TitleLeft";
-import ItemNav from "../../../../molecules/skill/ItemNav";
 import ImgBg from "./ImgBg";
 import ItemDetail from "./ItemDetail";
 import LogoItem from "./LogoItem";

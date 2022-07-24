@@ -1,14 +1,23 @@
-import { useState } from "react";
+/* eslint-disable react/button-has-type */
+/* eslint-disable comma-dangle */
+// import { toast } from "react-toastify";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import TitleCenter from "../../../molecules/landingPage/TitleCenter";
 import Item from "./item";
 import SkeletonItem from "./item/skeleton";
 
-export default function Skill() {
+export default function Skill({ data }: any) {
+  const [dataItem, setDataItem] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [itemNum, setItemNum] = useState(2);
 
-  setTimeout(() => {
-    setLoading(true);
-  }, 5000);
+  useEffect(() => {
+    setTimeout(() => {
+      setDataItem(data);
+      setLoading(true);
+    }, 5000);
+  }, []);
 
   return (
     <section id="LastLesson" className="dark:bg-neutral-700">
@@ -34,28 +43,38 @@ export default function Skill() {
         </div>
         <div className="w-full px-4">
           <div className="flex flex-wrap">
-            {loading ? (
-              <>
-                <Item img="/img/landing-page/skill/js.png" title="Javascript" />
-                <Item img="/img/landing-page/skill/db.png" title="Database" />
-              </>
+            {loading && dataItem ? (
+              <AnimatePresence>
+                {dataItem.slice(0, itemNum).map((item: any) => (
+                  <motion.div
+                    className="w-full px-4 lg:w-1/2 py-4"
+                    key={item._id}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 2 }}
+                  >
+                    <Item
+                      key={item._id}
+                      title={item.programmingLanguage.nama}
+                      img={item.programmingLanguage.gambar}
+                      data={item.tools}
+                    />
+                  </motion.div>
+                ))}
+              </AnimatePresence>
             ) : (
               <>
                 <SkeletonItem />
                 <SkeletonItem />
               </>
             )}
-            {/* <Item img="/img/landing-page/skill/css.png" title="CSS" />
-            <Item
-              img="/img/landing-page/skill/toolsprograming.png"
-              title="Tools"
-            /> */}
           </div>
         </div>
       </div>
       <div className="w-10 mx-auto mt-20">
-        <a
-          href="#"
+        <button
+          onClick={() => setItemNum(itemNum + 2)}
           className=" text-secondary hover:text-primary transition duration-500 dark:text-neutral-200 dark:hover:text-customyel"
         >
           <svg
@@ -72,7 +91,7 @@ export default function Skill() {
               d="M19 13l-7 7-7-7m14-8l-7 7-7-7"
             />
           </svg>
-        </a>
+        </button>
       </div>
     </section>
   );

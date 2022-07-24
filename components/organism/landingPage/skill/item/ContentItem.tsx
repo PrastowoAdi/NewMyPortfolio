@@ -1,12 +1,17 @@
 interface ContentItemProps {
   href: string;
-  img: "nextjs" | "nodejs" | "figma" | "tailwind" | "vscode" | "mongo";
+  img: string;
 }
 export default function ContentItem(props: ContentItemProps) {
   const { href = "/", img } = props;
   return (
-    <a href={href} className="max-w-[120px] mx-4 py-4 lg:mx-6 xl:mx-8 ">
-      <img src={`/img/landing-page/skill/${img}.png`} alt="item-img" />
+    <a
+      href={href}
+      target="_blank"
+      className="max-w-[120px] mx-4 py-4 lg:mx-6 xl:mx-8 "
+      rel="noreferrer"
+    >
+      <img src={img} alt="item-img" />
     </a>
   );
 }
